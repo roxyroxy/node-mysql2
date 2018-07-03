@@ -72,6 +72,8 @@ PromiseConnection.prototype.release = function() {
 function makeDoneCb(resolve, reject, localErr) {
   return function(err, rows, fields) {
     if (err) {
+      console.log("SPARTA")
+      console.log(err);
       localErr.message = err.message;
       localErr.code = err.code;
       localErr.errno = err.errno;
